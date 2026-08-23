@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI Ops Daily Report - 2026-08-18</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">OpenAI Ops Daily Report</a>
+    <nav>
+      <button class="tag-filter active" data-filter="all">All</button>
+      <button class="tag-filter" data-filter="adopt">採用</button>
+      <button class="tag-filter" data-filter="testing">検証中</button>
+      <button class="tag-filter" data-filter="hold">保留</button>
+      <button class="tag-filter" data-filter="reject">却下</button>
+      <button class="tag-filter" data-filter="high">High</button>
+      <button class="tag-filter" data-filter="medium">Medium</button>
+    </nav>
+  </header>
+  <main>
+    <article class="report-page">
+      <p class="date-label">2026-08-18</p>
+      <h1>OpenAI Ops Public Report - 2026-08-18</h1>
+<h2>ステータス</h2>
+<div class="table-wrap"><table><thead><tr><th>状態</th><th>優先度</th><th>内容</th></tr></thead><tbody>
+<tr><td>検証中</td><td>Medium</td><td>Node v26系の互換性watch</td></tr>
+<tr><td>保留</td><td>Medium</td><td>ブラウザでの手動確認が必要な公式ページ</td></tr>
+<tr><td>採用判断</td><td>なし</td><td>自動採用なし</td></tr>
+<tr><td>却下</td><td>High</td><td>自動更新と自動ダウングレード</td></tr>
+</tbody></table>
+<h2>手動確認について</h2>
+<ul>
+<li>一部の公式ページは手動確認候補として扱っています。</li>
+<li>未確認の内容や詳細URLは公開ページには掲載しません。</li>
+<li>確認済みで公開可能な要約だけを公開レポートに反映します。</li>
+</ul>
+<h2>概要</h2>
+<ul>
+<li>今日の監視は 継続可能。取得できる公式・実装系ソースを中心に確認を続ける。</li>
+<li>403になったページは失敗扱いではなく、ブラウザでの手動確認候補として扱う。</li>
+<li>Node v26系は互換性のwatch対象。環境変更は行わず、必要時のみsandboxで検証する。</li>
+</ul>
+<h2>今日の学び</h2>
+<ul>
+<li>Web取得できる情報とブラウザ手動確認が必要な情報を分離すると、日次監視の評価が安定する。</li>
+<li>公開レポートは詳細ログではなく、判断材料と次の確認事項に絞る。</li>
+<li>一部の公式ページは手動確認候補として扱っています。確認済みの内容だけ公開レポートに反映します。</li>
+</ul>
+<h2>検証判断</h2>
+<ul>
+<li>採用: なし。自動採用は行わない。</li>
+<li>検証中: Node v26系の互換性watch。sandboxで必要最小限の動作確認のみ。</li>
+<li>保留: 403の手動確認候補。ブラウザ確認またはalternate追加待ち。</li>
+<li>却下: 自動更新、自動ダウングレード、グローバル更新。</li>
+</ul>
+<h2>次に見ること</h2>
+<ul>
+<li>403ページをブラウザまたはChatGPT Workで確認し、公開可能な要約だけを追記する。</li>
+<li>OpenAI Codex Docs のリダイレクト先が安定しているか確認する。</li>
+<li>Node v26系でCodex CLI周辺の基本動作に差分がないかsandboxで確認する。</li>
+</ul>
+<h2>採用判断</h2>
+<ul>
+<li>現時点では自動採用なし。Level 1以上の手動確認が必要。</li>
+</ul>
+<h2>手動確認済みの公開判断</h2>
+<ul>
+<li>確認済みの公開可能な手動判断はまだありません。</li>
+</ul>
+<h2>公開メモ</h2>
+<ul>
+<li>詳細な取得結果やローカル環境のバージョン一覧は公開ページへ出さない。</li>
+<li>手動確認候補は、公式ページをブラウザで確認してから要約する。</li>
+</ul>
+<h2>公開範囲</h2>
+<ul>
+<li>このレポートは公開可能な要約だけを含む。</li>
+<li>詳細な運用ログ、認証情報、環境固有情報は含めない。</li>
+</ul>
+<p>_Generated: 2026-08-18 08:57_</p>
+    </article>
+
+  </main>
+  <script src="../js/main.js"></script>
+</body>
+</html>
