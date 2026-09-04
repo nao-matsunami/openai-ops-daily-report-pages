@@ -1,6 +1,66 @@
 {
-  "generated_at": "2026-09-04T08:10:08",
+  "generated_at": "2026-09-05T08:10:07",
   "reports": [
+    {
+      "date": "2026-09-05",
+      "ymd": "20260905",
+      "title": "OpenAI Ops Daily Report - 2026-09-05",
+      "href": "reports/20260905.html",
+      "summary": "今日の監視は 継続可能。取得できる公式・実装系ソースを中心に確認を続ける。 / 手動確認対象になったページはブラウザでの手動確認候補として扱う。 / Node v26系は互換性のwatch対象。環境変更は行わず、必要時のみsandboxで検証する。",
+      "conclusion_items": [
+        "今日の監視は 継続可能。取得できる公式・実装系ソースを中心に確認を続ける。",
+        "手動確認対象になったページは失敗扱いではなく、ブラウザでの手動確認候補として扱う。",
+        "Node v26系は互換性のwatch対象。環境変更は行わず、必要時のみsandboxで検証する。"
+      ],
+      "important": "",
+      "decisions": "採用: なし。自動採用は行わない。 / 検証中: Node v26系の互換性watch。sandboxで必要最小限の動作確認のみ。 / 保留: 手動確認対象の手動確認候補。ブラウザ確認またはalternate追加待ち。 / 却下: 自動更新、自動ダウングレード、グローバル更新。",
+      "decision_items": [
+        {
+          "label": "検証中",
+          "key": "testing",
+          "text": "Node v26系の互換性watch。sandboxで必要最小限の動作確認のみ。"
+        },
+        {
+          "label": "保留",
+          "key": "hold",
+          "text": "手動確認対象の手動確認候補。ブラウザ確認またはalternate追加待ち。"
+        },
+        {
+          "label": "却下",
+          "key": "reject",
+          "text": "自動更新、自動ダウングレード、グローバル更新。"
+        }
+      ],
+      "next": "手動確認対象ページをブラウザまたはChatGPT Workで確認し、公開可能な要約だけを追記する。 / OpenAI Codex Docs のリダイレクト先が安定しているか確認する。 / Node v26系でCodex CLI周辺の基本動作に差分がないかsandboxで確認する。",
+      "next_items": [
+        "手動確認対象ページをブラウザまたはChatGPT Workで確認し、公開可能な要約だけを追記する。",
+        "OpenAI Codex Docs のリダイレクト先が安定しているか確認する。",
+        "Node v26系でCodex CLI周辺の基本動作に差分がないかsandboxで確認する。"
+      ],
+      "public_decisions_count": 0,
+      "priority": {
+        "label": "Medium",
+        "key": "medium"
+      },
+      "tags": [
+        "OpenAI",
+        "Codex",
+        "ChatGPT",
+        "Medium",
+        "検証中",
+        "保留",
+        "却下"
+      ],
+      "tag_keys": [
+        "openai",
+        "codex",
+        "chatgpt",
+        "medium",
+        "testing",
+        "hold",
+        "reject"
+      ]
+    },
     {
       "date": "2026-09-04",
       "ymd": "20260904",
