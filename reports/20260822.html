@@ -10,11 +10,12 @@
   <header class="site-header">
     <a class="brand" href="../index.html">OpenAI Ops Daily Report</a>
     <nav>
-      <button class="tag-filter active" data-filter="all">All</button>
-      <button class="tag-filter" data-filter="adopt">採用</button>
-      <button class="tag-filter" data-filter="testing">検証中</button>
-      <button class="tag-filter" data-filter="hold">保留</button>
-      <button class="tag-filter" data-filter="reject">却下</button>
+      <span class="filter-label">状態で絞り込む</span>
+      <button class="tag-filter active" data-filter="all">すべて</button>
+      <button class="tag-filter" data-filter="adopt">採用候補</button>
+      <button class="tag-filter" data-filter="testing">AI追加検証中</button>
+      <button class="tag-filter" data-filter="hold">情報待ち</button>
+      <button class="tag-filter" data-filter="reject">不採用</button>
       <button class="tag-filter" data-filter="high">High</button>
       <button class="tag-filter" data-filter="medium">Medium</button>
     </nav>
@@ -22,6 +23,7 @@
   <main>
     <article class="report-page">
       <p class="date-label">2026-08-22</p>
+      <div class="status-row status-summary" aria-label="状態別件数"><span class="status-pill status-testing">AI追加検証中 1件</span><span class="status-pill status-hold">情報待ち 1件</span><span class="status-pill status-adopt">採用候補 1件</span><span class="status-pill status-reject">不採用 1件</span></div>
       <h1>OpenAI Ops Public Report - 2026-08-22</h1>
 <h2>ステータス</h2>
 <div class="table-wrap"><table><thead><tr><th>状態</th><th>優先度</th><th>内容</th></tr></thead><tbody>

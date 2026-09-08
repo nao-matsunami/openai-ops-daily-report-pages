@@ -1,4 +1,4 @@
-# OpenAI Ops Public Report - 2026-09-08
+# OpenAI Ops Public Report - 2026-09-09
 
 ## ステータス
 
@@ -35,20 +35,20 @@
 
 | 最終判定 | 信頼度 | 追加テスト | 利用者確認 | 対象 | 平易な理由 | 推奨アクション | 放置した場合の影響 |
 |---|---|---|---|---|---|---|---|
-| 採用候補 | 高 | 不要 | 不要 | ChatGPT — Release Notes \| OpenAI Help Center | 公式情報で確認でき、環境変更を伴わない知識更新として扱えるため採用候補 | レポートの運用知識として扱う。ソフトウェア更新や設定変更はしない | 有用な公式情報の取り込みが遅れる可能性があるが、運用停止リスクは低い |
-  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)
+| 採用候補 | 中 | 不要 | 不要 | OpenAI ChatGPT Release Notes | 公式情報で確認でき、環境変更を伴わない知識更新として扱えるため採用候補 | レポートの運用知識として扱う。ソフトウェア更新や設定変更はしない | 有用な公式情報の取り込みが遅れる可能性があるが、運用停止リスクは低い |
+  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)
   - 検証計画: 追加テスト不要。監視とレポート反映のみ。
   - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
-| AI追加検証中 | 高 | 要 | 不要 | Model Release Notes \| OpenAI Help Center | API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全 | 隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
-  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)
+| AI追加検証中 | 中 | 要 | 不要 | OpenAI Model Release Notes | API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全 | 隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
+  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)
   - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
   - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
 | AI追加検証中 | 高 | 要 | 不要 | OpenAI Developers | API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全 | 隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
   - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)
   - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
   - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
-| AI追加検証中 | 高 | 要 | 不要 | ChatGPT & Codex changelog \| ChatGPT Learn | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
-  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)
+| AI追加検証中 | 中 | 要 | 不要 | OpenAI Codex Changelog | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
+  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)
   - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
   - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
 | AI追加検証中 | 高 | 要 | 不要 | codex/README.md at main · openai/codex · GitHub | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
@@ -59,8 +59,8 @@
   - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)
   - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
   - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
-| AI追加検証中 | 高 | 要 | 不要 | OpenAI News \| OpenAI | API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全 | 隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
-  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)
+| AI追加検証中 | 中 | 要 | 不要 | OpenAI Blog / News | API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全 | 隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
+  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)
   - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
   - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
 | AI追加検証中 | 高 | 要 | 不要 | GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
@@ -99,4 +99,4 @@
 - このレポートは公開可能な要約だけを含む。
 - 詳細な運用ログ、認証情報、環境固有情報は含めない。
 
-_Generated: 2026-09-08 12:21_
+_Generated: 2026-09-09 08:10_

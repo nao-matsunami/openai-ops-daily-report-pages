@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OpenAI Ops Daily Report - 2026-09-08</title>
+  <title>OpenAI Ops Daily Report - 2026-09-09</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -22,9 +22,9 @@
   </header>
   <main>
     <article class="report-page">
-      <p class="date-label">2026-09-08</p>
+      <p class="date-label">2026-09-09</p>
       <div class="status-row status-summary" aria-label="状態別件数"><span class="status-pill status-adopt">採用候補 1件</span><span class="status-pill status-testing">AI追加検証中 9件</span></div>
-      <h1>OpenAI Ops Public Report - 2026-09-08</h1>
+      <h1>OpenAI Ops Public Report - 2026-09-09</h1>
 <h2>ステータス</h2>
 <div class="table-wrap"><table><thead><tr><th>状態</th><th>優先度</th><th>内容</th></tr></thead><tbody>
 <tr><td>採用候補</td><td>Medium</td><td>公式根拠を確認し、環境変更なしで扱える提案: 1件</td></tr>
@@ -57,14 +57,14 @@
 <li>自動採用: 0 件。AI判断は提案のみで、採用確定は行わない。</li>
 </ul>
 <div class="table-wrap"><table><thead><tr><th>最終判定</th><th>信頼度</th><th>追加テスト</th><th>利用者確認</th><th>対象</th><th>平易な理由</th><th>推奨アクション</th><th>放置した場合の影響</th></tr></thead><tbody>
-<tr><td>採用候補</td><td>高</td><td>不要</td><td>不要</td><td>ChatGPT — Release Notes \</td><td>OpenAI Help Center</td><td>公式情報で確認でき、環境変更を伴わない知識更新として扱えるため採用候補</td><td>レポートの運用知識として扱う。ソフトウェア更新や設定変更はしない</td><td>有用な公式情報の取り込みが遅れる可能性があるが、運用停止リスクは低い</td></tr>
+<tr><td>採用候補</td><td>中</td><td>不要</td><td>不要</td><td>OpenAI ChatGPT Release Notes</td><td>公式情報で確認でき、環境変更を伴わない知識更新として扱えるため採用候補</td><td>レポートの運用知識として扱う。ソフトウェア更新や設定変更はしない</td><td>有用な公式情報の取り込みが遅れる可能性があるが、運用停止リスクは低い</td></tr>
 </tbody></table>
-<p>  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)</p>
+<p>  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)</p>
 <p>  - 検証計画: 追加テスト不要。監視とレポート反映のみ。</p>
 <p>  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。</p>
-<div class="table-wrap"><table><thead><tr><th>AI追加検証中</th><th>高</th><th>要</th><th>不要</th><th>Model Release Notes \</th><th>OpenAI Help Center</th><th>API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全</th><th>隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない</th><th>互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある</th></tr></thead><tbody>
+<div class="table-wrap"><table><thead><tr><th>AI追加検証中</th><th>中</th><th>要</th><th>不要</th><th>OpenAI Model Release Notes</th><th>API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全</th><th>隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない</th><th>互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある</th></tr></thead><tbody>
 </tbody></table>
-<p>  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)</p>
+<p>  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)</p>
 <p>  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。</p>
 <p>  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。</p>
 <div class="table-wrap"><table><thead><tr><th>AI追加検証中</th><th>高</th><th>要</th><th>不要</th><th>OpenAI Developers</th><th>API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全</th><th>隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない</th><th>互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある</th></tr></thead><tbody>
@@ -72,9 +72,9 @@
 <p>  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)</p>
 <p>  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。</p>
 <p>  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。</p>
-<div class="table-wrap"><table><thead><tr><th>AI追加検証中</th><th>高</th><th>要</th><th>不要</th><th>ChatGPT &amp; Codex changelog \</th><th>ChatGPT Learn</th><th>Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある</th><th>隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない</th><th>互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある</th></tr></thead><tbody>
+<div class="table-wrap"><table><thead><tr><th>AI追加検証中</th><th>中</th><th>要</th><th>不要</th><th>OpenAI Codex Changelog</th><th>Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある</th><th>隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない</th><th>互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある</th></tr></thead><tbody>
 </tbody></table>
-<p>  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)</p>
+<p>  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)</p>
 <p>  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。</p>
 <p>  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。</p>
 <div class="table-wrap"><table><thead><tr><th>AI追加検証中</th><th>高</th><th>要</th><th>不要</th><th>codex/README.md at main · openai/codex · GitHub</th><th>Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある</th><th>隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない</th><th>互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある</th></tr></thead><tbody>
@@ -87,9 +87,9 @@
 <p>  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)</p>
 <p>  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。</p>
 <p>  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。</p>
-<div class="table-wrap"><table><thead><tr><th>AI追加検証中</th><th>高</th><th>要</th><th>不要</th><th>OpenAI News \</th><th>OpenAI</th><th>API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全</th><th>隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない</th><th>互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある</th></tr></thead><tbody>
+<div class="table-wrap"><table><thead><tr><th>AI追加検証中</th><th>中</th><th>要</th><th>不要</th><th>OpenAI Blog / News</th><th>API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全</th><th>隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない</th><th>互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある</th></tr></thead><tbody>
 </tbody></table>
-<p>  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)</p>
+<p>  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)</p>
 <p>  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。</p>
 <p>  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。</p>
 <div class="table-wrap"><table><thead><tr><th>AI追加検証中</th><th>高</th><th>要</th><th>不要</th><th>GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub</th><th>Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある</th><th>隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない</th><th>互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある</th></tr></thead><tbody>
@@ -128,7 +128,7 @@
 <li>このレポートは公開可能な要約だけを含む。</li>
 <li>詳細な運用ログ、認証情報、環境固有情報は含めない。</li>
 </ul>
-<p>_Generated: 2026-09-08 12:21_</p>
+<p>_Generated: 2026-09-09 08:10_</p>
     </article>
 
   </main>

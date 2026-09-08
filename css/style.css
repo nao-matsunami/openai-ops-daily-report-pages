@@ -47,6 +47,7 @@ body {
 nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
 }
 
@@ -66,6 +67,12 @@ button,
 
 .chip {
   font-weight: 700;
+}
+
+.filter-label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .chip-adopt {
