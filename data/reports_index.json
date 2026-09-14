@@ -1,6 +1,63 @@
 {
-  "generated_at": "2026-09-14T08:10:16",
+  "generated_at": "2026-09-15T08:10:18",
   "reports": [
+    {
+      "date": "2026-09-15",
+      "ymd": "20260915",
+      "title": "OpenAI Ops Daily Report - 2026-09-15",
+      "href": "reports/20260915.html",
+      "summary": "今日の監視は 継続可能。取得できる公式・実装系ソースを中心に確認を続ける。 / 自動取得できないページはAIが代替公式URLや公式リリース情報を追加照合する。 / Node v26系は互換性のwatch対象。環境変更は行わず、必要時のみsandboxで検証する。",
+      "conclusion_items": [
+        "今日の監視は 継続可能。取得できる公式・実装系ソースを中心に確認を続ける。",
+        "自動取得できないページは失敗扱いではなく、AIが代替公式URLや公式リリース情報を追加照合する。",
+        "Node v26系は互換性のwatch対象。環境変更は行わず、必要時のみsandboxで検証する。"
+      ],
+      "important": "",
+      "decisions": "採用候補: AIが公式根拠を確認し、環境変更を伴わない知識更新として提案する。 / AI追加検証中: 互換性や運用差分は隔離環境での検証計画に回す。 / 情報待ち: 主要ページを自動取得できず、代替公式情報だけでは内容確定できないもの。 / 不採用: 自動更新、自動ダウングレード、グローバル更新につながるもの。",
+      "decision_items": [
+        {
+          "label": "採用候補 1件",
+          "raw_label": "採用候補",
+          "key": "adopt",
+          "text": "公式根拠を確認し、環境変更なしで扱える提案: 1件",
+          "count": 1
+        },
+        {
+          "label": "AI追加検証中 9件",
+          "raw_label": "AI追加検証中",
+          "key": "testing",
+          "text": "隔離環境での互換性確認計画が必要: 9件",
+          "count": 9
+        }
+      ],
+      "next": "自動取得できないページは代替の公式URL、公式GitHub、公式リリースノートを探して照合する。 / OpenAI Codex Docs のリダイレクト先が安定しているか確認する。 / Node v26系でCodex CLI周辺の基本動作に差分がないか隔離環境で確認する計画を作る。",
+      "next_items": [
+        "自動取得できないページは代替の公式URL、公式GitHub、公式リリースノートを探して照合する。",
+        "OpenAI Codex Docs のリダイレクト先が安定しているか確認する。",
+        "Node v26系でCodex CLI周辺の基本動作に差分がないか隔離環境で確認する計画を作る。"
+      ],
+      "public_decisions_count": 0,
+      "priority": {
+        "label": "Medium",
+        "key": "medium"
+      },
+      "tags": [
+        "OpenAI",
+        "Codex",
+        "ChatGPT",
+        "Medium",
+        "採用候補 1件",
+        "AI追加検証中 9件"
+      ],
+      "tag_keys": [
+        "openai",
+        "codex",
+        "chatgpt",
+        "medium",
+        "adopt",
+        "testing"
+      ]
+    },
     {
       "date": "2026-09-14",
       "ymd": "20260914",
