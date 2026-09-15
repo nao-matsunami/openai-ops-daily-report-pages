@@ -13,7 +13,9 @@
       <span class="filter-label">状態で絞り込む</span>
       <button class="tag-filter active" data-filter="all">すべて</button>
       <button class="tag-filter" data-filter="adopt">採用候補</button>
+      <button class="tag-filter" data-filter="adopted">採用済み</button>
       <button class="tag-filter" data-filter="testing">AI追加検証中</button>
+      <button class="tag-filter" data-filter="queued">検証待ち</button>
       <button class="tag-filter" data-filter="hold">情報待ち</button>
       <button class="tag-filter" data-filter="reject">不採用</button>
       <button class="tag-filter" data-filter="high">High</button>
@@ -23,81 +25,55 @@
   <main>
     <article class="report-page">
       <p class="date-label">2026-09-07</p>
-      <div class="status-row status-summary" aria-label="状態別件数"><span class="status-pill status-testing">AI追加検証中 1件</span><span class="status-pill status-hold">情報待ち 1件</span><span class="status-pill status-adopt">採用候補 1件</span><span class="status-pill status-reject">不採用 1件</span></div>
+      <div class="status-row status-summary" aria-label="状態別件数"><span class="status-pill status-adopt">採用候補 1件</span><span class="status-pill status-queued">検証待ち 7件</span></div>
       <h1>OpenAI Ops Public Report - 2026-09-07</h1>
 <h2>ステータス</h2>
 <div class="table-wrap"><table><thead><tr><th>状態</th><th>優先度</th><th>内容</th></tr></thead><tbody>
-<tr><td>検証中</td><td>Medium</td><td>Node v26系の互換性watch</td></tr>
-<tr><td>保留</td><td>Medium</td><td>ブラウザでの手動確認が必要な公式ページ</td></tr>
-<tr><td>採用判断</td><td>なし</td><td>自動採用なし</td></tr>
-<tr><td>却下</td><td>High</td><td>自動更新と自動ダウングレード</td></tr>
+<tr><td>採用候補</td><td>Medium</td><td>本日新規または状態変化: 1件</td></tr>
+<tr><td>検証待ち</td><td>Medium</td><td>本日新規または状態変化: 7件</td></tr>
 </tbody></table>
-<h2>手動確認について</h2>
+<h2>本日の新規変更</h2>
 <ul>
-<li>一部の公式ページは手動確認候補として扱っています。</li>
-<li>未確認の内容や詳細URLは公開ページには掲載しません。</li>
-<li>確認済みで公開可能な要約だけを公開レポートに反映します。</li>
+<li>8件。詳細は下表。</li>
 </ul>
-<h2>概要</h2>
-<ul>
-<li>今日の監視は 継続可能。取得できる公式・実装系ソースを中心に確認を続ける。</li>
-<li>403になったページは失敗扱いではなく、ブラウザでの手動確認候補として扱う。</li>
-<li>Node v26系は互換性のwatch対象。環境変更は行わず、必要時のみsandboxで検証する。</li>
-</ul>
-<h2>今日の学び</h2>
-<ul>
-<li>Web取得できる情報とブラウザ手動確認が必要な情報を分離すると、日次監視の評価が安定する。</li>
-<li>公開レポートは詳細ログではなく、判断材料と次の確認事項に絞る。</li>
-<li>一部の公式ページは手動確認候補として扱っています。確認済みの内容だけ公開レポートに反映します。</li>
-</ul>
-<h2>AI判断</h2>
-<ul>
-<li>AI判断件数: 8 件。</li>
-<li>人の確認またはsandbox検証が必要: 4 件。</li>
-<li>自動採用: 0 件。AI判断は提案のみで、採用確定は行わない。</li>
-</ul>
-<div class="table-wrap"><table><thead><tr><th>判断</th><th>Level</th><th>優先度</th><th>対象</th><th>理由</th><th>次アクション</th></tr></thead><tbody>
-<tr><td>hold</td><td>1</td><td>medium</td><td>OpenAI ChatGPT Release Notes</td><td>取得結果がmanual_reviewのため、AIだけでは内容確定しない</td><td>ブラウザまたはChatGPT Workで公開可能な変更だけ確認する</td></tr>
-<tr><td>hold</td><td>1</td><td>medium</td><td>OpenAI Model Release Notes</td><td>取得結果がmanual_reviewのため、AIだけでは内容確定しない</td><td>公式情報を再確認し、API/model影響があればsandbox検証へ回す</td></tr>
-<tr><td>hold</td><td>1</td><td>medium</td><td>OpenAI Codex Changelog</td><td>取得結果がmanual_reviewのため、AIだけでは内容確定しない</td><td>sandboxでCodex関連の影響を確認する</td></tr>
-<tr><td>reject</td><td>0</td><td>medium</td><td>codex/README.md at main · openai/codex · GitHub</td><td>更新・認証・秘密情報・環境変更に関わる可能性があるため自動採用しない</td><td>必要なら人が影響範囲を確認する</td></tr>
-<tr><td>hold</td><td>1</td><td>medium</td><td>OpenAI Blog / News</td><td>取得結果がmanual_reviewのため、AIだけでは内容確定しない</td><td>公式情報を再確認し、API/model影響があればsandbox検証へ回す</td></tr>
-<tr><td>reject</td><td>0</td><td>medium</td><td>GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub</td><td>更新・認証・秘密情報・環境変更に関わる可能性があるため自動採用しない</td><td>必要なら人が影響範囲を確認する</td></tr>
-<tr><td>reject</td><td>0</td><td>medium</td><td>Releases · openai/codex · GitHub</td><td>更新・認証・秘密情報・環境変更に関わる可能性があるため自動採用しない</td><td>必要なら人が影響範囲を確認する</td></tr>
-<tr><td>reject</td><td>0</td><td>medium</td><td>OpenAI · GitHub</td><td>更新・認証・秘密情報・環境変更に関わる可能性があるため自動採用しない</td><td>必要なら人が影響範囲を確認する</td></tr>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>状態</th><th>初回検出日</th><th>経過日数</th><th>最終変化日</th><th>最終確認日</th><th>次回確認条件</th><th>公式出典</th><th>理由</th><th>推奨アクション</th></tr></thead><tbody>
+<tr><td>openai_chatgpt_release_notes</td><td>採用候補</td><td>20260907</td><td>0</td><td>20260907</td><td>20260907</td><td>公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する</td><td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" rel="noopener noreferrer">OpenAI ChatGPT Release Notes</a> / [ChatGPT — リリースノート \</td><td>OpenAI Help Center](https://help.openai.com/ja-jp/articles/6825453-chatgpt-release-notes) / <a href="https://developers.openai.com/llms.txt" rel="noopener noreferrer">OpenAI ChatGPT Release Notes</a></td><td>公式情報で確認でき、環境変更を伴わない知識更新として扱えるため採用候補</td><td>レポートの運用知識として扱う。ソフトウェア更新や設定変更はしない</td></tr>
+<tr><td>openai_model_release_notes</td><td>検証待ち</td><td>20260907</td><td>0</td><td>20260907</td><td>20260907</td><td>公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する</td><td><a href="https://help.openai.com/en/articles/9624314-model-release-notes" rel="noopener noreferrer">OpenAI Model Release Notes</a> / [モデルリリースノート \</td><td>OpenAI Help Center](https://help.openai.com/ja-jp/articles/9624314-model-release-notes) / <a href="https://developers.openai.com/llms.txt" rel="noopener noreferrer">OpenAI Model Release Notes</a></td><td>API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全</td><td>隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない</td></tr>
+<tr><td>openai_codex_changelog</td><td>検証待ち</td><td>20260907</td><td>0</td><td>20260907</td><td>20260907</td><td>公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する</td><td><a href="https://help.openai.com/en/articles/11428266-codex-changelog" rel="noopener noreferrer">OpenAI Codex Changelog</a> / [ChatGPT &amp; Codex changelog \</td><td>ChatGPT Learn](https://learn.chatgpt.com/docs/changelog) / <a href="https://developers.openai.com/llms.txt" rel="noopener noreferrer">OpenAI Codex Changelog</a></td><td>Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある</td><td>隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない</td></tr>
+<tr><td>openai_codex_cli_docs</td><td>検証待ち</td><td>20260907</td><td>0</td><td>20260907</td><td>20260907</td><td>公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する</td><td><a href="https://github.com/openai/codex/blob/main/README.md" rel="noopener noreferrer">codex/README.md at main · openai/codex · GitHub</a> / <a href="https://github.com/openai/codex" rel="noopener noreferrer">GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub</a> / <a href="https://developers.openai.com/llms.txt" rel="noopener noreferrer">codex/README.md at main · openai/codex · GitHub</a></td><td>Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある</td><td>隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない</td></tr>
+<tr><td>openai_blog_news</td><td>検証待ち</td><td>20260907</td><td>0</td><td>20260907</td><td>20260907</td><td>公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する</td><td><a href="https://openai.com/news/" rel="noopener noreferrer">OpenAI Blog / News</a> / [OpenAI News \</td><td>OpenAI](https://openai.com/news/) / <a href="https://developers.openai.com/llms.txt" rel="noopener noreferrer">OpenAI Blog / News</a></td><td>API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全</td><td>隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない</td></tr>
+<tr><td>openai_codex_github_repo</td><td>検証待ち</td><td>20260907</td><td>0</td><td>20260907</td><td>20260907</td><td>公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する</td><td><a href="https://github.com/openai/codex" rel="noopener noreferrer">GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub</a> / <a href="https://api.github.com/repos/openai/codex" rel="noopener noreferrer">GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub</a> / <a href="https://developers.openai.com/llms.txt" rel="noopener noreferrer">GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub</a></td><td>Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある</td><td>隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない</td></tr>
+<tr><td>openai_codex_github_releases</td><td>検証待ち</td><td>20260907</td><td>0</td><td>20260907</td><td>20260907</td><td>公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する</td><td><a href="https://github.com/openai/codex/releases" rel="noopener noreferrer">Releases · openai/codex · GitHub</a> / <a href="https://api.github.com/repos/openai/codex/releases" rel="noopener noreferrer">Releases · openai/codex · GitHub</a> / <a href="https://developers.openai.com/llms.txt" rel="noopener noreferrer">Releases · openai/codex · GitHub</a></td><td>Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある</td><td>隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない</td></tr>
+<tr><td>openai_github_org</td><td>検証待ち</td><td>20260907</td><td>0</td><td>20260907</td><td>20260907</td><td>公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する</td><td><a href="https://github.com/openai" rel="noopener noreferrer">OpenAI · GitHub</a> / <a href="https://api.github.com/orgs/openai/repos" rel="noopener noreferrer">OpenAI · GitHub</a> / <a href="https://developers.openai.com/llms.txt" rel="noopener noreferrer">OpenAI · GitHub</a></td><td>Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある</td><td>隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない</td></tr>
 </tbody></table>
-<h2>検証判断</h2>
+<h2>前日から状態が変わった項目</h2>
 <ul>
-<li>採用: なし。自動採用は行わない。</li>
-<li>検証中: Node v26系の互換性watch。sandboxで必要最小限の動作確認のみ。</li>
-<li>保留: 403の手動確認候補。ブラウザ確認またはalternate追加待ち。</li>
-<li>却下: 自動更新、自動ダウングレード、グローバル更新。</li>
+<li>なし</li>
 </ul>
-<h2>次に見ること</h2>
+<h2>新しく完了した検証</h2>
 <ul>
-<li>403ページをブラウザまたはChatGPT Workで確認し、公開可能な要約だけを追記する。</li>
-<li>OpenAI Codex Docs のリダイレクト先が安定しているか確認する。</li>
-<li>Node v26系でCodex CLI周辺の基本動作に差分がないかsandboxで確認する。</li>
+<li>なし</li>
 </ul>
-<h2>採用判断</h2>
+<h2>継続中の課題</h2>
 <ul>
-<li>現時点では自動採用なし。Level 1以上の手動確認が必要。</li>
+<li>なし</li>
 </ul>
-<h2>手動確認済みの公開判断</h2>
+<h2>本日の重要な新規変更</h2>
 <ul>
-<li>確認済みの公開可能な手動判断はまだありません。</li>
+<li>あり。本日新規または状態変化は 採用候補 1件、検証待ち 7件。</li>
 </ul>
-<h2>公開メモ</h2>
+<h2>日次処理</h2>
 <ul>
-<li>詳細な取得結果やローカル環境のバージョン一覧は公開ページへ出さない。</li>
-<li>手動確認候補は、公式ページをブラウザで確認してから要約する。</li>
+<li>日次処理は正常終了しました。</li>
+<li>自動採用、ソフトウェア更新、設定変更、インストール、公開範囲変更は行っていません。</li>
+<li>採用候補は提案であり、採用済みではありません。</li>
 </ul>
 <h2>公開範囲</h2>
 <ul>
-<li>このレポートは公開可能な要約だけを含む。</li>
-<li>詳細な運用ログ、認証情報、環境固有情報は含めない。</li>
+<li>このレポートは公開可能な要約と公式出典だけを含みます。</li>
+<li>内部URL、ローカルパス、認証情報、詳細な運用ログは含めません。</li>
 </ul>
-<p>_Generated: 2026-09-07 11:03_</p>
+<p>_Generated: 2026-09-15 09:03_</p>
     </article>
 
   </main>

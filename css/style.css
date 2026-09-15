@@ -88,6 +88,14 @@ button,
   color: var(--info);
 }
 
+.chip-queued,
+.chip-nochange,
+.chip-adopted {
+  background: #edf7ee;
+  border-color: #bfdfc4;
+  color: #276738;
+}
+
 .chip-hold,
 .chip-low {
   background: #fff8e8;
@@ -104,6 +112,12 @@ button,
 
 button {
   cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #f2b705;
+  outline-offset: 3px;
 }
 
 button.active {
@@ -274,6 +288,10 @@ h3 {
   border-radius: 8px;
 }
 
+.report-card[hidden] {
+  display: none !important;
+}
+
 .report-card:hover {
   border-color: var(--accent);
   box-shadow: 0 12px 28px rgba(22, 32, 42, 0.08);
@@ -291,6 +309,7 @@ h3 {
 .report-page p,
 li {
   color: var(--muted);
+  overflow-wrap: anywhere;
 }
 
 .status-row {
@@ -319,6 +338,14 @@ li {
   background: #eef4ff;
   border-color: #c8d8f4;
   color: var(--info);
+}
+
+.status-queued,
+.status-nochange,
+.status-adopted {
+  background: #edf7ee;
+  border-color: #bfdfc4;
+  color: #276738;
 }
 
 .status-hold {
@@ -354,6 +381,19 @@ li {
 
 .report-card .tags {
   margin-top: 14px;
+}
+
+.empty-state {
+  margin: 18px 0 0;
+  padding: 18px;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.empty-state[hidden] {
+  display: none !important;
 }
 
 .section-heading {
@@ -397,6 +437,7 @@ td {
   border-bottom: 1px solid var(--line);
   text-align: left;
   vertical-align: top;
+  overflow-wrap: anywhere;
 }
 
 th {

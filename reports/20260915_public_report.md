@@ -4,99 +4,56 @@
 
 | 状態 | 優先度 | 内容 |
 |---|---|---|
-| 採用候補 | Medium | 公式根拠を確認し、環境変更なしで扱える提案: 1件 |
-| AI追加検証中 | Medium | 隔離環境での互換性確認計画が必要: 9件 |
+| 新規の重要変更なし | Low | 前日から情報・判断に実質的な変化なし |
 
-## AI追加検証について
+## 本日の新規変更
 
-- 一部の公式ページはAI追加検証候補として扱っています。
-- 未確認の内容や詳細URLは公開ページには掲載しません。
-- 確認済みで公開可能な要約だけを公開レポートに反映します。
+- なし
 
-## 概要
+## 前日から状態が変わった項目
 
-- 今日の監視は 継続可能。取得できる公式・実装系ソースを中心に確認を続ける。
-- 自動取得できないページは失敗扱いではなく、AIが代替公式URLや公式リリース情報を追加照合する。
-- Node v26系は互換性のwatch対象。環境変更は行わず、必要時のみsandboxで検証する。
+- なし
 
-## 今日の学び
+## 新しく完了した検証
 
-- Web取得できる情報とAI追加調査が必要な情報を分離すると、日次監視の評価が安定する。
-- 公開レポートは詳細ログではなく、判断材料と次の確認事項に絞る。
-- 一部の公式ページはAI追加調査候補として扱っています。確認済みの内容だけ公開レポートに反映します。
+- なし
 
-## AI判断
+## 継続中の課題
 
-- AI判断件数: 10 件。
-- 状態別件数: 採用候補 1件、AI追加検証中 9件。
-- AI追加調査または隔離検証が必要: 9 件。
-- 利用者確認が本当に必要: 0 件。
-- 自動採用: 0 件。AI判断は提案のみで、採用確定は行わない。
+- 継続中: 10件。毎日の新規件数には数えません。
+- 現在状態: 採用候補 1件、検証待ち 9件。
 
-| 最終判定 | 信頼度 | 追加テスト | 利用者確認 | 対象 | 平易な理由 | 推奨アクション | 放置した場合の影響 |
-|---|---|---|---|---|---|---|---|
-| 採用候補 | 中 | 不要 | 不要 | OpenAI ChatGPT Release Notes | 公式情報で確認でき、環境変更を伴わない知識更新として扱えるため採用候補 | レポートの運用知識として扱う。ソフトウェア更新や設定変更はしない | 有用な公式情報の取り込みが遅れる可能性があるが、運用停止リスクは低い |
-  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)
-  - 検証計画: 追加テスト不要。監視とレポート反映のみ。
-  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
-| AI追加検証中 | 中 | 要 | 不要 | OpenAI Model Release Notes | API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全 | 隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
-  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)
-  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
-  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
-| AI追加検証中 | 高 | 要 | 不要 | OpenAI Developers | API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全 | 隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
-  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)
-  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
-  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
-| AI追加検証中 | 中 | 要 | 不要 | OpenAI Codex Changelog | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
-  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)
-  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
-  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
-| AI追加検証中 | 高 | 要 | 不要 | codex/README.md at main · openai/codex · GitHub | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
-  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)
-  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
-  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
-| AI追加検証中 | 高 | 要 | 不要 | ChatGPT \| ChatGPT Learn | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
-  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)
-  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
-  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
-| AI追加検証中 | 中 | 要 | 不要 | OpenAI Blog / News | API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全 | 隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
-  - 確認した公式情報: [source link omitted] (手動確認対象) / [source link omitted] (200) / [source link omitted] (200)
-  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
-  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
-| AI追加検証中 | 高 | 要 | 不要 | GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない | 互換性や運用差分の把握が遅れ、後日の検証量が増える可能性がある |
-  - 確認した公式情報: [source link omitted] (200) / [source link omitted] (200) / [source link omitted] (200)
-  - 検証計画: 隔離したsandboxで、現行設定の読み取り、最小サンプル実行、差分記録、ロールバック条件の確認だけを行う。実環境更新やインストールは行わない。
-  - 利用者確認要否: 利用者確認不要。AIの調査・提案または継続監視で扱う。
+| ID | 状態 | 初回検出日 | 経過日数 | 最終変化日 | 最終確認日 | 次回確認条件 | 公式出典 |
+|---|---|---:|---:|---:|---:|---|---|
+| openai_chatgpt_release_notes | 採用候補 | 20260907 | 8 | 20260909 | 20260915 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [OpenAI ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) / [ChatGPT — リリースノート \| OpenAI Help Center](https://help.openai.com/ja-jp/articles/6825453-chatgpt-release-notes) / [OpenAI ChatGPT Release Notes](https://developers.openai.com/llms.txt) |
+| openai_model_release_notes | 検証待ち | 20260907 | 8 | 20260909 | 20260915 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [OpenAI Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes) / [モデルリリースノート \| OpenAI Help Center](https://help.openai.com/ja-jp/articles/9624314-model-release-notes) / [OpenAI Model Release Notes](https://developers.openai.com/llms.txt) |
+| openai_developers | 検証待ち | 20260908 | 7 | 20260908 | 20260915 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [OpenAI Developers](https://developers.openai.com/) / [OpenAI API Platform Documentation](https://developers.openai.com/api/docs) / [OpenAI Developers](https://developers.openai.com/llms.txt) |
+| openai_codex_changelog | 検証待ち | 20260907 | 8 | 20260909 | 20260915 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [OpenAI Codex Changelog](https://help.openai.com/en/articles/11428266-codex-changelog) / [ChatGPT & Codex changelog \| ChatGPT Learn](https://learn.chatgpt.com/docs/changelog) / [OpenAI Codex Changelog](https://developers.openai.com/llms.txt) |
+| openai_codex_cli_docs | 検証待ち | 20260907 | 8 | 20260907 | 20260915 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [codex/README.md at main · openai/codex · GitHub](https://github.com/openai/codex/blob/main/README.md) / [GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub](https://github.com/openai/codex) / [codex/README.md at main · openai/codex · GitHub](https://developers.openai.com/llms.txt) |
+| openai_codex_docs | 検証待ち | 20260908 | 7 | 20260908 | 20260915 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [ChatGPT \| ChatGPT Learn](https://learn.chatgpt.com/docs) / [Codex cloud \| ChatGPT Learn](https://learn.chatgpt.com/docs/cloud) / [ChatGPT \| ChatGPT Learn](https://developers.openai.com/llms.txt) |
+| openai_blog_news | 検証待ち | 20260907 | 8 | 20260909 | 20260915 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [OpenAI Blog / News](https://openai.com/news/) / [OpenAI News \| OpenAI](https://openai.com/news/) / [OpenAI Blog / News](https://developers.openai.com/llms.txt) |
+| openai_codex_github_repo | 検証待ち | 20260907 | 8 | 20260907 | 20260915 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub](https://github.com/openai/codex) / [GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub](https://api.github.com/repos/openai/codex) / [GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub](https://developers.openai.com/llms.txt) |
+| openai_codex_github_releases | 検証待ち | 20260907 | 8 | 20260907 | 20260915 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [Releases · openai/codex · GitHub](https://github.com/openai/codex/releases) / [Releases · openai/codex · GitHub](https://api.github.com/repos/openai/codex/releases) / [Releases · openai/codex · GitHub](https://developers.openai.com/llms.txt) |
+| openai_github_org | 検証待ち | 20260907 | 8 | 20260907 | 20260915 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [OpenAI · GitHub](https://github.com/openai) / [OpenAI · GitHub](https://api.github.com/orgs/openai/repos) / [OpenAI · GitHub](https://developers.openai.com/llms.txt) |
 
-## 検証判断
+## 本日の重要な新規変更
 
-- 採用候補: AIが公式根拠を確認し、環境変更を伴わない知識更新として提案する。
-- AI追加検証中: 互換性や運用差分は隔離環境での検証計画に回す。
-- 情報待ち: 主要ページを自動取得できず、代替公式情報だけでは内容確定できないもの。
-- 不採用: 自動更新、自動ダウングレード、グローバル更新につながるもの。
+- なし
 
-## 次に見ること
+## 日次処理
 
-- 自動取得できないページは代替の公式URL、公式GitHub、公式リリースノートを探して照合する。
-- OpenAI Codex Docs のリダイレクト先が安定しているか確認する。
-- Node v26系でCodex CLI周辺の基本動作に差分がないか隔離環境で確認する計画を作る。
+- 日次処理は正常終了しました。
+- 自動採用、ソフトウェア更新、設定変更、インストール、公開範囲変更は行っていません。
+- 採用候補は提案であり、採用済みではありません。
 
-## 採用判断
+## 前日との差分確認
 
-- 現時点では自動採用なし。AI判断は提案のみで、採用確定は行わない。
-
-## 確認済みの公開判断
-
-- 確認済みの公開可能な判断はまだありません。
-
-## 公開メモ
-
-- 詳細な取得結果やローカル環境のバージョン一覧は公開ページへ出さない。
-- AI追加検証候補は、公式情報で確認してから要約する。
+- 前日と候補ID・判断内容・公式出典の正規化結果が同一でした。
+- 同一長文の再掲載を避けるため、この日は重要な新規変更なしの短縮形式で整理しています。
 
 ## 公開範囲
 
-- このレポートは公開可能な要約だけを含む。
-- 詳細な運用ログ、認証情報、環境固有情報は含めない。
+- このレポートは公開可能な要約と公式出典だけを含みます。
+- 内部URL、ローカルパス、認証情報、詳細な運用ログは含めません。
 
-_Generated: 2026-09-15 08:10_
+_Generated: 2026-09-15 09:06_

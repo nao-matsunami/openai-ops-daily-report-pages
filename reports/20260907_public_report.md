@@ -4,75 +4,49 @@
 
 | 状態 | 優先度 | 内容 |
 |---|---|---|
-| 検証中 | Medium | Node v26系の互換性watch |
-| 保留 | Medium | ブラウザでの手動確認が必要な公式ページ |
-| 採用判断 | なし | 自動採用なし |
-| 却下 | High | 自動更新と自動ダウングレード |
+| 採用候補 | Medium | 本日新規または状態変化: 1件 |
+| 検証待ち | Medium | 本日新規または状態変化: 7件 |
 
-## 手動確認について
+## 本日の新規変更
 
-- 一部の公式ページは手動確認候補として扱っています。
-- 未確認の内容や詳細URLは公開ページには掲載しません。
-- 確認済みで公開可能な要約だけを公開レポートに反映します。
+- 8件。詳細は下表。
 
-## 概要
+| ID | 状態 | 初回検出日 | 経過日数 | 最終変化日 | 最終確認日 | 次回確認条件 | 公式出典 | 理由 | 推奨アクション |
+|---|---|---:|---:|---:|---:|---|---|---|---|
+| openai_chatgpt_release_notes | 採用候補 | 20260907 | 0 | 20260907 | 20260907 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [OpenAI ChatGPT Release Notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) / [ChatGPT — リリースノート \| OpenAI Help Center](https://help.openai.com/ja-jp/articles/6825453-chatgpt-release-notes) / [OpenAI ChatGPT Release Notes](https://developers.openai.com/llms.txt) | 公式情報で確認でき、環境変更を伴わない知識更新として扱えるため採用候補 | レポートの運用知識として扱う。ソフトウェア更新や設定変更はしない |
+| openai_model_release_notes | 検証待ち | 20260907 | 0 | 20260907 | 20260907 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [OpenAI Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes) / [モデルリリースノート \| OpenAI Help Center](https://help.openai.com/ja-jp/articles/9624314-model-release-notes) / [OpenAI Model Release Notes](https://developers.openai.com/llms.txt) | API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全 | 隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない |
+| openai_codex_changelog | 検証待ち | 20260907 | 0 | 20260907 | 20260907 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [OpenAI Codex Changelog](https://help.openai.com/en/articles/11428266-codex-changelog) / [ChatGPT & Codex changelog \| ChatGPT Learn](https://learn.chatgpt.com/docs/changelog) / [OpenAI Codex Changelog](https://developers.openai.com/llms.txt) | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない |
+| openai_codex_cli_docs | 検証待ち | 20260907 | 0 | 20260907 | 20260907 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [codex/README.md at main · openai/codex · GitHub](https://github.com/openai/codex/blob/main/README.md) / [GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub](https://github.com/openai/codex) / [codex/README.md at main · openai/codex · GitHub](https://developers.openai.com/llms.txt) | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない |
+| openai_blog_news | 検証待ち | 20260907 | 0 | 20260907 | 20260907 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [OpenAI Blog / News](https://openai.com/news/) / [OpenAI News \| OpenAI](https://openai.com/news/) / [OpenAI Blog / News](https://developers.openai.com/llms.txt) | API/model関連の中優先度以上の差分は、公式情報を確認したうえでsandbox検証に回すのが安全 | 隔離したsandboxで互換性確認計画を作る。API設定やモデル指定は変更しない |
+| openai_codex_github_repo | 検証待ち | 20260907 | 0 | 20260907 | 20260907 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub](https://github.com/openai/codex) / [GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub](https://api.github.com/repos/openai/codex) / [GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub](https://developers.openai.com/llms.txt) | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない |
+| openai_codex_github_releases | 検証待ち | 20260907 | 0 | 20260907 | 20260907 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [Releases · openai/codex · GitHub](https://github.com/openai/codex/releases) / [Releases · openai/codex · GitHub](https://api.github.com/repos/openai/codex/releases) / [Releases · openai/codex · GitHub](https://developers.openai.com/llms.txt) | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない |
+| openai_github_org | 検証待ち | 20260907 | 0 | 20260907 | 20260907 | 公式情報の本文、取得ステータス、判断理由、推奨アクションのいずれかが変化した場合に詳細確認する | [OpenAI · GitHub](https://github.com/openai) / [OpenAI · GitHub](https://api.github.com/orgs/openai/repos) / [OpenAI · GitHub](https://developers.openai.com/llms.txt) | Codex関連の変更候補は実環境へ反映せず、隔離したsandbox検証で十分に確認する必要がある | 隔離したsandbox検証計画を作る。CLI更新、設定変更、インストールはしない |
 
-- 今日の監視は 継続可能。取得できる公式・実装系ソースを中心に確認を続ける。
-- 403になったページは失敗扱いではなく、ブラウザでの手動確認候補として扱う。
-- Node v26系は互換性のwatch対象。環境変更は行わず、必要時のみsandboxで検証する。
+## 前日から状態が変わった項目
 
-## 今日の学び
+- なし
 
-- Web取得できる情報とブラウザ手動確認が必要な情報を分離すると、日次監視の評価が安定する。
-- 公開レポートは詳細ログではなく、判断材料と次の確認事項に絞る。
-- 一部の公式ページは手動確認候補として扱っています。確認済みの内容だけ公開レポートに反映します。
+## 新しく完了した検証
 
-## AI判断
+- なし
 
-- AI判断件数: 8 件。
-- 人の確認またはsandbox検証が必要: 4 件。
-- 自動採用: 0 件。AI判断は提案のみで、採用確定は行わない。
+## 継続中の課題
 
-| 判断 | Level | 優先度 | 対象 | 理由 | 次アクション |
-|---|---:|---|---|---|---|
-| hold | 1 | medium | OpenAI ChatGPT Release Notes | 取得結果がmanual_reviewのため、AIだけでは内容確定しない | ブラウザまたはChatGPT Workで公開可能な変更だけ確認する |
-| hold | 1 | medium | OpenAI Model Release Notes | 取得結果がmanual_reviewのため、AIだけでは内容確定しない | 公式情報を再確認し、API/model影響があればsandbox検証へ回す |
-| hold | 1 | medium | OpenAI Codex Changelog | 取得結果がmanual_reviewのため、AIだけでは内容確定しない | sandboxでCodex関連の影響を確認する |
-| reject | 0 | medium | codex/README.md at main · openai/codex · GitHub | 更新・認証・秘密情報・環境変更に関わる可能性があるため自動採用しない | 必要なら人が影響範囲を確認する |
-| hold | 1 | medium | OpenAI Blog / News | 取得結果がmanual_reviewのため、AIだけでは内容確定しない | 公式情報を再確認し、API/model影響があればsandbox検証へ回す |
-| reject | 0 | medium | GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub | 更新・認証・秘密情報・環境変更に関わる可能性があるため自動採用しない | 必要なら人が影響範囲を確認する |
-| reject | 0 | medium | Releases · openai/codex · GitHub | 更新・認証・秘密情報・環境変更に関わる可能性があるため自動採用しない | 必要なら人が影響範囲を確認する |
-| reject | 0 | medium | OpenAI · GitHub | 更新・認証・秘密情報・環境変更に関わる可能性があるため自動採用しない | 必要なら人が影響範囲を確認する |
+- なし
 
-## 検証判断
+## 本日の重要な新規変更
 
-- 採用: なし。自動採用は行わない。
-- 検証中: Node v26系の互換性watch。sandboxで必要最小限の動作確認のみ。
-- 保留: 403の手動確認候補。ブラウザ確認またはalternate追加待ち。
-- 却下: 自動更新、自動ダウングレード、グローバル更新。
+- あり。本日新規または状態変化は 採用候補 1件、検証待ち 7件。
 
-## 次に見ること
+## 日次処理
 
-- 403ページをブラウザまたはChatGPT Workで確認し、公開可能な要約だけを追記する。
-- OpenAI Codex Docs のリダイレクト先が安定しているか確認する。
-- Node v26系でCodex CLI周辺の基本動作に差分がないかsandboxで確認する。
-
-## 採用判断
-
-- 現時点では自動採用なし。Level 1以上の手動確認が必要。
-
-## 手動確認済みの公開判断
-
-- 確認済みの公開可能な手動判断はまだありません。
-
-## 公開メモ
-
-- 詳細な取得結果やローカル環境のバージョン一覧は公開ページへ出さない。
-- 手動確認候補は、公式ページをブラウザで確認してから要約する。
+- 日次処理は正常終了しました。
+- 自動採用、ソフトウェア更新、設定変更、インストール、公開範囲変更は行っていません。
+- 採用候補は提案であり、採用済みではありません。
 
 ## 公開範囲
 
-- このレポートは公開可能な要約だけを含む。
-- 詳細な運用ログ、認証情報、環境固有情報は含めない。
+- このレポートは公開可能な要約と公式出典だけを含みます。
+- 内部URL、ローカルパス、認証情報、詳細な運用ログは含めません。
 
-_Generated: 2026-09-07 11:03_
+_Generated: 2026-09-15 09:03_

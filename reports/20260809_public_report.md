@@ -62,7 +62,7 @@
 - Importance: Medium
 - Summary: Codex CLI、Remote、ChatGPT desktop app、Record & Replay、remote task handoffなど、Work/Codex運用に関係する更新が確認できた。
 - Decision: sources.jsonの優先URL見直し候補。
-- Next action: [source link omitted] を優先URL候補として検討する。
+- Next action: 公開可能な公式URLを優先URL候補として検討する。
 
 ### OpenAI Blog / News
 - Importance: Low
