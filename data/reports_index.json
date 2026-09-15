@@ -1,6 +1,46 @@
 {
-  "generated_at": "2026-09-15T11:17:08",
+  "generated_at": "2026-09-16T08:10:14",
   "reports": [
+    {
+      "date": "2026-09-16",
+      "ymd": "20260916",
+      "title": "OpenAI Ops Daily Report - 2026-09-16",
+      "href": "reports/20260916.html",
+      "summary": "",
+      "conclusion_items": [],
+      "important": "",
+      "decisions": "| 状態 | 優先度 | 内容 | |---|---|---| | 新規の重要変更なし | Low | 前日から情報・判断に実質的な変化なし |",
+      "decision_items": [
+        {
+          "label": "新規の重要変更なし 1件",
+          "raw_label": "新規の重要変更なし",
+          "key": "nochange",
+          "text": "前日から情報・判断に実質的な変化なし",
+          "count": 1
+        }
+      ],
+      "next": "",
+      "next_items": [],
+      "public_decisions_count": 0,
+      "priority": {
+        "label": "Low",
+        "key": "low"
+      },
+      "tags": [
+        "OpenAI",
+        "Codex",
+        "ChatGPT",
+        "Low",
+        "新規の重要変更なし 1件"
+      ],
+      "tag_keys": [
+        "openai",
+        "codex",
+        "chatgpt",
+        "low",
+        "nochange"
+      ]
+    },
     {
       "date": "2026-09-15",
       "ymd": "20260915",
